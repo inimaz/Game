@@ -1,0 +1,50 @@
+##This is going to be a game about conquering the world. Risk-like
+
+At the beginning there will be N players that will own the same number of countries
+
+Player
+	player_id ID code for each of the players
+	name Name of the player, given by user. Default is 'Player'+ 'number'. Ex: Player1
+	type type of player. Ex: (A)ggresive, (n)eutral
+	
+Country
+	country_id ID of the country
+	name Name of the country
+	owner_id Id of player that owns the country at that moment
+	
+Global
+	N_players number of players
+	N_countries by default is N_players x N_players
+	combat_mode 
+		Normal each player attacks from each of its countries to neighbour countries.
+		Distance each player attacks from each of its countries to any countries. 
+			Attack: rand*1/distance
+			Defense: rand*distance
+		
+Status
+	turn Number of the turn
+	Ranking Who is winning? Sorted by number_of_countries/player
+		Player.name
+		Player.number_of_countries
+	
+	
+	
+	
+	
+#The combat
+
+By turns, each player attacks other countries.
+	
+	Imagine a game with 9 players and 9 countries
+	
+	1 2 3
+	4 5 6
+	7 8 9
+	
+	1 can attack 2 and 4 with normal attack. Each attacks and defends with a random number. 
+		If attacker's number is higher, it will conquer the defender country.
+		If defender's number is higher, nothing happens and player 1 loses his turn.
+	BUT if the game is set to combat_mode = distance, 1 can attack all other countries and attack and defense will be based on distance
+	If it attacks 5 attack rand*1/sqrt(2) whereas 5 will defend with rand*sqrt(2)
+	
+
