@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import random
 
-import globals as g
+import global_variables as g
 
 import helpers as h 
 

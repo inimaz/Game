@@ -1,6 +1,6 @@
 import numpy as np
 import random
-import globals as g
+import global_variables as g
 #In here we are going to start our matrix world
 def rand_num():
     N = g.size_world-1
@@ -69,23 +69,24 @@ def search(world,current_player_id,i,j):
         #First to ensure that the i or j are not out of the matrix
         
         #Right
-        if j <  g.size_world:
-            if world [i,j+1] != current_player_id:                
+        if j <  g.size_world and world [i,j+1] != current_player_id:                
                 defender_pos = (i,j+1)
         #Left    
         elif j > 0 and world [i,j-1] != current_player_id:                
             defender_pos = (i,j-1)
         #Top    
-        elif i <  g.size_world:
-            if world [i+1,j] != current_player_id:                
+        elif i <  g.size_world and world [i+1,j] != current_player_id:                
                 defender_pos = (i+1,j)
         #Bottom   
         elif i> 0 and world [i-1,j] != current_player_id:                
             defender_pos = (i-1,j)
+        #If none of the neighbouts are attackable, then 
         else :
             defender_pos = -1
-            
-        return defender_pos
+    else:
+        defender_pos =-1
+    return defender_pos
+        
                 
 
 def combat(atacker,defender):

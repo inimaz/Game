@@ -7,7 +7,6 @@ Created on Fri Jun 28 22:18:50 2019
 
 #This file is to initialize all the globals
 import numpy as np
-import core as c
 def initialize(n_players):
     
     global n_countries
