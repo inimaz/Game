@@ -1,12 +1,36 @@
-# -*- coding: utf-8 -*-
-from . import helpers
+#we import our global variables and the packages needed
 
-def get_hmm():
-    """Get a thought."""
-    return 'hmmm...'
+import numpy as np
+import pandas as pd
+import random
+
+import globals as g
+
+import helpers as h 
+
+#Let's create
+def main ():
+    
+
+    print ('This is a game called Game')
+    n_players = int(input('Welcome, please tell me the number of players :'))
+    g.initialize(n_players)
+
+    print('There are',g.n_countries,'countries')
+
+    world ,year= h.start_game(n_players)
+    
+    h.global_turn(world , year)
+       
+    
+    
+    
+def summary(year,world):
+    print('It is ',year, 'a. G.')
+    print('This is the world we live in')
+    print(world)
+    return year,world,ranking
 
 
-def hmm():
-    """Contemplation..."""
-    if helpers.get_answer():
-        print(get_hmm())
+if __name__ == "__main__":
+    main()
