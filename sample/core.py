@@ -1,10 +1,7 @@
 #we import our global variables and the packages needed
 
 import numpy as np
-import pandas as pd
 import random
-
-import global_variables as g
 
 import helpers as h 
 
@@ -14,15 +11,20 @@ def main ():
 
     print ('This is a game called Game')
     n_players = int(input('Welcome, please tell me the number of players :'))
-    g.initialize(n_players)
+    h.g.initialize(n_players)
 
-    print('There are',g.n_countries,'countries')
+    print ('There are ' + repr(h.g.n_countries) + ' countries')
 
     world ,year= h.start_game(n_players)
     
-    h.global_turn(world , year)
-       
-    
+    while year < 5:
+        print('It is the year ' + repr(year) + ' of this era')
+        
+        h.global_turn(world , year,n_players)
+        print('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@')
+        print('@@@@@ Happy New Year! @@@@@@@')
+        print('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@')
+    print('End of the game')
     
     
 def summary(year,world):

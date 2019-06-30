@@ -5,10 +5,7 @@ This is to be run in the command line with
 pytest *nameOfFile*
 """
 import sys
-print ('This is the path before context ', sys.path)
-from .context import sample
-print ('This is the path after context ', sys.path)
-from sample import helpers as h
+import helpers as h
 import numpy as np
 
 #We define the variables

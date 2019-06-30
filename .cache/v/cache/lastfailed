@@ -1,0 +1,5 @@
+{
+  "sample/test_search_2.py::test_rand_num": true,
+  "sample/test_search_2.py::test_search": true,
+  "tests/test_search.py": true
+}

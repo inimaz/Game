@@ -1,12 +1,13 @@
 import numpy as np
 import random
 import global_variables as g
-#In here we are going to start our matrix world
+
 def rand_num():
     N = g.size_world-1
     n = random.randint(0,N)
     return n
 
+#In here we are going to start our matrix world
 def start_game(n_players):
     #world is going to be a nxn matrix
     
@@ -21,7 +22,6 @@ def start_game(n_players):
     for k in range (0,n_players):
         i= rand_num()
         j= rand_num()
-
         while conq_countries[k] < n_players:
             while world[i,j] >=0:
                 i= rand_num()
@@ -42,21 +42,32 @@ def individual_turn(world,current_player_id):
         x_origin= rand_num()
         y_origin= rand_num()
         defender_pos = search(world,current_player_id,x_origin,y_origin)
-        
+        attacker_pos = (x_origin,y_origin)
         if defender_pos != -1:
             defender_id = world[defender_pos]
-            if defender_pos != -1 and combat(current_player_id,defender_id):
+            print('Player ' + repr(current_player_id) +' attacks from country ' + repr(attacker_pos))
+            print('The target country is ' + repr(defender_pos)+ '. It belongs to Player' + repr(defender_id))
+            if combat(current_player_id,defender_id):
                 world[defender_pos]= current_player_id
+                print('Player ' + repr(current_player_id) + ' has conquered ' + repr(defender_pos))
+                print('This territory used to belong to Player ' + repr(defender_id))
             else:
-                   my_turn= False
+                print('Player ' + repr(current_player_id) + ' has lost the battle and needs some rest.')   
+                print('Now it`s next player`s turn')
+                print('%%%%%%%%%% NEXT Player %%%%%%%%%%%%%%%')
+                my_turn= False
+#+ ' attacks from country ' + repr(attacker_pos) ' to '+
+    return world
 
-    return(world)
-    input('End of the turn, press any key to continue')
 
-def global_turn(world,year):
+def global_turn(world,year,n_players):
     current_player_id = 0
-    world = individual_turn(world,current_player_id)
-    current_player_id += 1
+    while current_player_id <= n_players-1:
+        print('It is the turn of Player ' + repr(current_player_id))
+        world = individual_turn(world,current_player_id)
+        print('This is the world today')
+        print (world)
+        current_player_id += 1
     year += 1         
 
 
@@ -64,19 +75,27 @@ def global_turn(world,year):
 def search(world,current_player_id,i,j):
           
     if world[i,j]== current_player_id:
+         ###########
+       #If you need to log i and j uncomment this
+#        print('This is i: ' + repr(i))
+#        print('This is j: ' + repr(j))
+       #############
+        
         #Check the 4 neighbour countries and combat them
         #2 conditions
-        #First to ensure that the i or j are not out of the matrix
-        
-        #Right
-        if j <  g.size_world and world [i,j+1] != current_player_id:                
-                defender_pos = (i,j+1)
+        #First to ensure that the i or j are not out of the matrix.
+        # they should be smaller than the size of the matrix -1, since python
+        # starts counting on 0
+
+         #Right 
+        if j <  (g.size_world-1) and world [i,j+1] != current_player_id:                
+            defender_pos = (i,j+1)
         #Left    
         elif j > 0 and world [i,j-1] != current_player_id:                
             defender_pos = (i,j-1)
         #Top    
-        elif i <  g.size_world and world [i+1,j] != current_player_id:                
-                defender_pos = (i+1,j)
+        elif i <  (g.size_world-1) and world [i+1,j] != current_player_id:                
+            defender_pos = (i+1,j)
         #Bottom   
         elif i> 0 and world [i-1,j] != current_player_id:                
             defender_pos = (i-1,j)
@@ -96,3 +115,8 @@ def combat(atacker,defender):
         return True
     else:
         return False
+    
+# Do a function to count the number of countries per player. Maybe import counter?
+#def count_countries(world):
+#    for i in player_id:
+#        
