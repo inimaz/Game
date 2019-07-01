@@ -8,30 +8,32 @@ import helpers as h
 #Let's create
 def main ():
     
-
+    
     print ('This is a game called Game')
     n_players = int(input('Welcome, please tell me the number of players :'))
+    year_max= 10
     h.g.initialize(n_players)
 
     print ('There are ' + repr(h.g.n_countries) + ' countries')
 
     world ,year= h.start_game(n_players)
     
-    while year < 5:
+    while year < year_max:
         print('It is the year ' + repr(year) + ' of this era')
         
-        h.global_turn(world , year,n_players)
+        world = h.global_turn(world , n_players)
+        if world.size == 0:
+            break
+        
+        h.pause()
         print('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@')
         print('@@@@@ Happy New Year! @@@@@@@')
         print('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@')
+        year += 1
+    if year == year_max:
+        h.ranking(world,n_players)
     print('End of the game')
     
-    
-def summary(year,world):
-    print('It is ',year, 'a. G.')
-    print('This is the world we live in')
-    print(world)
-    return year,world,ranking
 
 
 if __name__ == "__main__":

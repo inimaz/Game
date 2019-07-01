@@ -19,4 +19,6 @@ def initialize(n_players):
     year = 0
     conq_countries = np.zeros((n_players,1))
     world = np.zeros((n_players,n_players))-1
+    #We would like to have int, not float
+    world = world.astype(int)
     size_world = np.shape(world)[1]
