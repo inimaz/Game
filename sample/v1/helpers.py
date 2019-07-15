@@ -2,6 +2,9 @@ import numpy as np
 import random
 import global_variables as g
 
+
+
+
 #In here we are going to start our matrix world
 def start_game(n_players):
     #world is going to be a nxn matrix
@@ -28,7 +31,7 @@ def start_game(n_players):
     print('These are the countries per player')
     print(conq_countries)
     print('This is the world we live in')
-    print (world)
+    print(world)
     return world,year
 
 
@@ -44,7 +47,7 @@ def global_turn(world,n_players):
         if world.size == 0:
             break
         print('This is the world today')
-        print (world)
+        print(world)
         print('')
         current_player_id += 1
     
@@ -82,7 +85,7 @@ def individual_turn(world,current_player_id):
         if count_countries(world)[1][0] == g.n_countries:
             print('Player ' + repr(current_player_id) + ' has conquered the world!')
             
-            print (world)
+            print(world)
             #We return an empty array to global_turn
             world = np.array([])
             break
@@ -176,4 +179,19 @@ def ranking(world,n_players):
             #The last loop ended up in n. This one starts in n+1
             print(repr(n+1) + '           '+ repr(i)+ '               0')
             
-            
+##############################################################################
+#################################################################
+##### This is used by the pygame interface to randomize the colors
+def calculate_colors (n_players):
+    color_matrix = np.zeros((n_players,3))
+
+    for row in range(0,n_players):
+        color = list(np.random.choice(range(256), size=3))
+        r=0
+        while (color == color_matrix[r]).all():
+            #This returns a random color
+            color = list(np.random.choice(range(256), size=3))
+            r+=1
+        color_matrix[row]= color
+        
+    return color_matrix
