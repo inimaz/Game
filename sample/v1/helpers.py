@@ -195,3 +195,4 @@ def calculate_colors (n_players):
         color_matrix[row]= color
         
     return color_matrix
+
