@@ -1,7 +1,9 @@
 import numpy as np
 import random
+import logging
 import global_variables as g
 import helpers_draw as hd
+import logging
 
 
 
@@ -47,26 +49,24 @@ def start_game(n_players):
 
 
 
-def global_turn(world,n_players,computer_turn,select_grid,event,text):
+def global_turn(world,n_players,select_grid,event,text,computer_turn):
     if computer_turn:
         current_player_id = 1
         
         while current_player_id <= n_players-1:
-            hd.print_text('%%%%%%%%%%%%%%% NEXT Player %%%%%%%%%%%%%%% \nIt is the turn of Player ' + repr(current_player_id) + '.')
+#            hd.print_text('%%%%%%%%%%%%%%% NEXT Player %%%%%%%%%%%%%%% \nIt is the turn of Player ' + repr(current_player_id) + '.')
             world = individual_turn(world,current_player_id)
             #If someone has conquered the world, world size will be 0
             if world.size == 0:
                 break
-            hd.print_text('This is the world today')
-            print(world)
-            print('')
+#            hd.print_text('This is the world today')
             current_player_id += 1
         
-        hd.print_text('It is the end of a wonderful year')
+#        hd.print_text('It is the end of a wonderful year')
         computer_turn=False
     else:
-        text,select_grid,computer_turn=human_turn(world,select_grid,event,text)
-    return world,text,select_grid,computer_turn         
+        text,world,select_grid,computer_turn=human_turn(text,world,select_grid,event)
+    return  text,world,select_grid,computer_turn       
 
 
 def individual_turn(world,current_player_id):
@@ -81,25 +81,23 @@ def individual_turn(world,current_player_id):
         x_origin= rand_num()
         y_origin= rand_num()
         defender_pos = search(world,current_player_id,x_origin,y_origin)
-        attacker_pos = (x_origin,y_origin)
+#        attacker_pos = (x_origin,y_origin)
         if defender_pos != -1:
             defender_id = world[defender_pos]
-            hd.print_text('Player ' + repr(current_player_id) +' attacks from country ' + repr(attacker_pos))
-            hd.print_text('The target country is ' + repr(defender_pos)+ '. It belongs to Player ' + repr(defender_id))
+#            hd.print_text('Player ' + repr(current_player_id) +' attacks from country ' + repr(attacker_pos))
+#            hd.print_text('The target country is ' + repr(defender_pos)+ '. It belongs to Player ' + repr(defender_id))
             if combat(current_player_id,defender_id):
                 world[defender_pos]= current_player_id
-                hd.print_text('Player ' + repr(current_player_id) + ' has conquered ' + repr(defender_pos))
-                hd.print_text('This territory used to belong to Player ' + repr(defender_id))
+#                hd.print_text('Player ' + repr(current_player_id) + ' has conquered ' + repr(defender_pos))
+#                hd.print_text('This territory used to belong to Player ' + repr(defender_id))
                 
             else:
-                hd.print_text('Player ' + repr(current_player_id) + ' has lost the battle and needs some rest.')   
-                hd.print_text('Now it`s next player`s turn')
+#                hd.print_text('Player ' + repr(current_player_id) + ' has lost the battle and needs some rest.')   
+#                hd.print_text('Now it`s next player`s turn')
 
                 my_turn= False
         if count_countries(world)[1][0] == g.n_countries:
-            hd.print_text('Player ' + repr(current_player_id) + ' has conquered the world!')
-            
-            hd.draw_world(world)
+#            hd.print_text('Player ' + repr(current_player_id) + ' has conquered the world!')
             #We return an empty array to global_turn
             world = np.array([])
             break
@@ -107,16 +105,17 @@ def individual_turn(world,current_player_id):
     return world
 
 
-def human_turn(world,select_grid,event,text):
+def human_turn(text,world,select_grid,event):
     select_grid,text = hd.select_field(event,select_grid,world,text)
     computer_turn= hd.next_turn(event)
     if hd.attack(event):
-        human_combat(select_grid,world,text)
+        world,computer_turn,text,select_grid=human_combat(select_grid,world,text)
+        logging.debug("Attacking...")
     
 
     
     
-    return text,select_grid,computer_turn
+    return text,world,select_grid,computer_turn  
 
 
 def search(world,current_player_id,i,j):
@@ -204,29 +203,33 @@ def ranking(world,n_players):
     return Ranking
             
 def human_combat(select_grid,world,text):
-    i=0
-    defender_pos=np.zeros((4,2))-1
+    n=0
+    defenders=np.zeros((4,2))-1
+    defenders=defenders.astype(int)
     computer_turn=False
     for row in range(g.n_players):
         for column in range(g.n_players):
 #            if select_grid[row][column] == -1:
 #                attacker_pos = (row,column)
             if select_grid[row][column] == 2:
-                defender_pos [i]= (row,column)
-                i=i+1
-    for n in range (i):
-        if (defender_pos[i]!=(-1,-1)).all():
+                defenders [n]= (row,column)
+                n+=1
+    for i in range (n):
+        defender_pos= tuple(defenders[i])
+        if defender_pos !=(-1,-1):
             attacker = g.human_playerid
-            defender = world[defender_pos[i]]
-            if combat(attacker,defender):
+            logging.debug("Country "+ repr(defender_pos) + "is been attacked by player.")
+            defender = world[defender_pos]
+            if combat(attacker,defender) and world[defender_pos]!= attacker :
                 world[defender_pos]= attacker
-                text= 'You conquered ' + repr(defender_pos)
+                logging.debug( 'Human player conquered ' + repr(defender_pos)+'. It used to belong to' + repr(defender))
             else:
                 computer_turn=True
+                select_grid = np.zeros((g.n_players,g.n_players))
                 text= 'You were not able to conquer ' + repr(defender_pos)
                 break
             
-    return world,computer_turn,text
+    return world,computer_turn,text,select_grid
             
             
             

@@ -2,6 +2,7 @@ import pygame
 import global_variables as g
 import numpy as np
 import time
+import logging
 
 MARGIN = g.MARGIN
 WIDTH= g.WIDTH
@@ -74,10 +75,10 @@ def select_field(event,select_grid,world,text):
             # Set that location to minus one If it is already minus 1, set it to 0
             if select_grid[row][column] == -1:
                 select_grid = np.zeros((n_players,n_players))
-    #        elif select_grid[row][column] == 2:
-    #            text='Player ' + repr(g.human_playerid)+ ' attacks Player '+ repr(world[row][column])
-            elif select_grid[row][column] == 1:#If it is a field that the country can attack
+            elif select_grid[row][column] == 1 and world[row][column]!= g.human_playerid:#If it is a field that the country can attack
                 select_grid[row][column] = 2
+            elif select_grid[row][column] == 1 and world[row][column]== g.human_playerid:#If it is a field that the country can attack
+                select_grid[row][column] = 0
                 text='The target country is ' + repr(pos)+ '. It belongs to Player ' + repr(world[row][column]) + '. Click again to attack this country.'
             elif world[row][column]== g.human_playerid:#To select only the ones from the human player
                 select_grid = np.zeros((n_players,n_players))#This is to select only one field
@@ -100,15 +101,17 @@ def next_turn(event,computer_turn=False):
         pos = pygame.mouse.get_pos()
         if pos[0]>=g.NEXT_TURN_xpos and pos[0]<=(g.NEXT_TURN_xpos+g.NEXT_TURN_WIDTH) and pos[1]>=g.NEXT_TURN_ypos and pos[1]<=(g.NEXT_TURN_ypos+g.NEXT_TURN_HEIGHT):
             computer_turn=True
+            logging.debug('You have clicked Next_Turn button')
     return computer_turn
 
-def attack(event,attack=False):
+def attack(event,attackFlag=False):
     if event.type == pygame.MOUSEBUTTONDOWN:
         # User clicks the mouse. Get the position
         pos = pygame.mouse.get_pos()
         if pos[0]>=g.ATTACK_xpos and pos[0]<=(g.ATTACK_xpos+g.NEXT_TURN_WIDTH) and pos[1]>=g.ATTACK_ypos and pos[1]<=(g.ATTACK_ypos+g.NEXT_TURN_HEIGHT):
-            attack=True
-    return attack
+            attackFlag=True
+            logging.debug('You have clicked Attack button')
+    return attackFlag
 
 def draw_world(world,select_grid = g.select_grid_0,end_game=False,Ranking=0):
     

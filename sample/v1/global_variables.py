@@ -8,7 +8,7 @@ Created on Fri Jun 28 22:18:50 2019
 #This file is to initialize all the globals
 import numpy as np
 
-n_players = 10
+n_players = 5
 year = 0
 human_playerid=0
 year_max= 10
