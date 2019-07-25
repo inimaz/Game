@@ -8,7 +8,7 @@ Created on Fri Jun 28 22:18:50 2019
 #This file is to initialize all the globals
 import numpy as np
 
-n_players = 25
+n_players = 5
 year = 0
 human_playerid=0
 year_max= 10
@@ -61,6 +61,12 @@ NEXT_TURN_WIDTH = 5*WIDTH
 
 ATTACK_xpos=NEXT_TURN_xpos
 ATTACK_ypos = NEXT_TURN_ypos - WIDTH -2*MARGIN
+
+START_xpos=WINDOW_WIDTH/2
+START_ypos=WINDOW_HEIGHT/2
+START_WIDTH = 25*MARGIN
+START_HEIGHT = 10*MARGIN
+
 color_matrix =[]
 # Define some colors
 BLACK = (0, 0, 0)
@@ -92,3 +98,5 @@ def calculate_colors (n_players):
 def initialize_draw ():
     global color_matrix
     color_matrix=calculate_colors(n_players)
+    
+end_game=False

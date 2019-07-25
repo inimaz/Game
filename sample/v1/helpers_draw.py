@@ -113,6 +113,16 @@ def attack(event,attackFlag=False):
             logging.debug('You have clicked Attack button')
     return attackFlag
 
+def start_game(event):
+    startFlag=False
+    if event.type == pygame.MOUSEBUTTONDOWN:
+        # User clicks the mouse. Get the position
+        pos = pygame.mouse.get_pos()
+        if pos[0]>=g.START_xpos and pos[0]<=(g.START_xpos+g.START_WIDTH) and pos[1]>=g.START_ypos and pos[1]<=(g.START_ypos+g.START_HEIGHT):
+            startFlag=True
+            logging.debug('You have clicked Start button')
+    return startFlag
+
 def draw_world(world,select_grid = g.select_grid_0,end_game=False,Ranking=0):
     
     if end_game:
@@ -217,6 +227,23 @@ def attack_button():
     
     blit_text('ATTACK',(g.ATTACK_xpos+WIDTH,g.ATTACK_ypos),font,color=g.WHITE)
     
+def start_button():
+    font=pygame.font.Font('freesansbold.ttf',25)
+    pygame.draw.rect(screen,
+                     g.BLACK,
+                     [g.START_xpos - 1/2 * MARGIN,
+                      g.START_ypos- 1/2 * MARGIN,
+                      g.START_WIDTH + MARGIN,
+                      g.START_HEIGHT + MARGIN])
+    pygame.draw.rect(screen,
+                     g.PURPLE,
+                     [g.START_xpos,
+                      g.START_ypos,
+                      g.START_WIDTH,
+                      g.START_HEIGHT])
+    
+    blit_text('START',(g.START_xpos+WIDTH,g.START_ypos),font,color=g.BLACK)
+    
     
     
 def final_ranking(Ranking):
@@ -228,37 +255,60 @@ def final_ranking(Ranking):
                              g.WHITE,
                              [ MARGIN,
                               MARGIN,
-                             g.WINDOW_WIDTH-2*MARGIN,
+                             g.WINDOW_WIDTH-3*MARGIN,
                               g.WINDOW_HEIGHT-2*MARGIN])
     
     
     width_rect=g.WINDOW_WIDTH-6*MARGIN
-    height_rect=2*MARGIN
+    height_rect=5*MARGIN
     pygame.draw.rect(screen,
                              g.PURPLE,
-                             [ 3*MARGIN,
-                              g.RANKING_YPOS,
+                             [3*MARGIN,
+                              g.RANKING_YPOS+MARGIN,
                              width_rect,
                               height_rect])
     text='Final Ranking'
-    blit_text(text,(3*MARGIN + width_rect/2,g.RANKING_YPOS + height_rect/2),font)    
+    blit_text(text,(3*MARGIN + width_rect/2,g.RANKING_YPOS + height_rect/2),font,color=g.WHITE)    
     text= 'Player || Countries'
-    blit_text(text,(4*MARGIN,5*MARGIN),font)
+    blit_text(text,(g.WINDOW_WIDTH/2-2*MARGIN,8*MARGIN),font)
     for i in range(0,n_players):
         pos=Ranking[i][0]
         Player=Ranking[i][1]
         Countries=Ranking[i][2]
         text='|| '+ repr(Countries)
         #Where to draw each rectangle?
-        x_rect= 4*MARGIN
-        y_rect=(g.RANKING_YPOS+ MARGIN)+(MARGIN + HEIGHT) *(i+1)
+        x_rect= g.WINDOW_WIDTH/2-2*MARGIN
+        y_rect=(g.RANKING_YPOS+ 6*MARGIN)+(MARGIN + HEIGHT) *(i+1)
         pygame.draw.rect(screen,
                      g.color_matrix [Player],
                      [x_rect,
                       y_rect,
                       WIDTH,
                       HEIGHT])
-        blit_text(str(pos),(x_rect-MARGIN,y_rect),font)
+        blit_text(str(pos),(x_rect-5*MARGIN,y_rect),font)
         blit_text(str(Player),(x_rect,y_rect),font)
         blit_text(text,(x_rect+2*WIDTH,y_rect),font)
         
+        
+
+def intro_page():
+    font = pygame.font.Font('freesansbold.ttf',115, True, False)
+    
+    
+    
+    pygame.draw.rect(screen,
+                             g.WHITE,
+                             [ MARGIN,
+                              MARGIN,
+                             g.WINDOW_WIDTH-3*MARGIN,
+                              g.WINDOW_HEIGHT-2*MARGIN])
+    
+    
+    width_rect=g.WINDOW_WIDTH-6*MARGIN
+    height_rect=5*MARGIN
+    pygame.draw.rect(screen,
+                             g.PURPLE,
+                             [3*MARGIN,
+                              g.RANKING_YPOS+MARGIN,
+                             width_rect,
+                              height_rect])

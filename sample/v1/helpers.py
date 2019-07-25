@@ -7,24 +7,7 @@ import logging
 
 
 
-def main_loop (n_players,world,end_game):
-    
-    if not end_game:
-        hd.print_text ( "Welcome to a Game called The Game. \nLet's have fun with this game.\nConquer all countries to win!")
-        year=g.year
-        
-        while year < g.year_max:
-            hd.print_text ('It is the year ' + repr(year) + ' of this era')
-            
-            world = global_turn(world , n_players)
-            if world.size == 0:
-                break
-            
-            hd.print_text('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@ Happy New Year! @@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@')
-            year += 1
-        end_game= True
-    return end_game
-    
+   
 #In here we are going to start our matrix world
 def start_game(n_players):
     #world is going to be a nxn matrix
@@ -35,7 +18,6 @@ def start_game(n_players):
     g.initialize_draw()
     conq_countries = g.conq_countries
     world = g.world
-    year = g.year
     for k in range (0,n_players):
         i= rand_num()
         j= rand_num()
@@ -45,7 +27,7 @@ def start_game(n_players):
                 j= rand_num()
             world[i,j] = k
             conq_countries[k] +=1
-    return world,year
+    return world
 
 
 
@@ -99,7 +81,7 @@ def individual_turn(world,current_player_id):
         if count_countries(world)[1][0] == g.n_countries:
 #            hd.print_text('Player ' + repr(current_player_id) + ' has conquered the world!')
             #We return an empty array to global_turn
-            world = np.array([])
+            g.end_game=True
             break
             
     return world
@@ -198,7 +180,7 @@ def ranking(world,n_players):
     for i in range(0,n_players):
         if i not in Players:
             #The last loop ended up in n. This one starts in n+1
-            Ranking[i][:]=([n+1,i,0])
+            Ranking[n][:]=([n+1,i,0])
     Ranking=Ranking.astype(int)
     return Ranking
             
