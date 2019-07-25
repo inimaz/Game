@@ -8,7 +8,7 @@ Created on Fri Jun 28 22:18:50 2019
 #This file is to initialize all the globals
 import numpy as np
 
-n_players = 5
+n_players = 25
 year = 0
 human_playerid=0
 year_max= 10
@@ -68,6 +68,7 @@ WHITE = (255, 255, 255)
 GREEN = (0, 255, 0)
 RED = (255, 0, 0)
 BLUE = (0,0,255)
+PURPLE = (102, 0, 102)
 ##############################################################################
 #################################################################
 ##### This is used by the pygame interface to randomize colors

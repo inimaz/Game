@@ -216,3 +216,49 @@ def attack_button():
                       g.NEXT_TURN_HEIGHT])
     
     blit_text('ATTACK',(g.ATTACK_xpos+WIDTH,g.ATTACK_ypos),font,color=g.WHITE)
+    
+    
+    
+def final_ranking(Ranking):
+    font = pygame.font.SysFont('Calibri', 15, True, False)
+    
+    
+    
+    pygame.draw.rect(screen,
+                             g.WHITE,
+                             [ MARGIN,
+                              MARGIN,
+                             g.WINDOW_WIDTH-2*MARGIN,
+                              g.WINDOW_HEIGHT-2*MARGIN])
+    
+    
+    width_rect=g.WINDOW_WIDTH-6*MARGIN
+    height_rect=2*MARGIN
+    pygame.draw.rect(screen,
+                             g.PURPLE,
+                             [ 3*MARGIN,
+                              g.RANKING_YPOS,
+                             width_rect,
+                              height_rect])
+    text='Final Ranking'
+    blit_text(text,(3*MARGIN + width_rect/2,g.RANKING_YPOS + height_rect/2),font)    
+    text= 'Player || Countries'
+    blit_text(text,(4*MARGIN,5*MARGIN),font)
+    for i in range(0,n_players):
+        pos=Ranking[i][0]
+        Player=Ranking[i][1]
+        Countries=Ranking[i][2]
+        text='|| '+ repr(Countries)
+        #Where to draw each rectangle?
+        x_rect= 4*MARGIN
+        y_rect=(g.RANKING_YPOS+ MARGIN)+(MARGIN + HEIGHT) *(i+1)
+        pygame.draw.rect(screen,
+                     g.color_matrix [Player],
+                     [x_rect,
+                      y_rect,
+                      WIDTH,
+                      HEIGHT])
+        blit_text(str(pos),(x_rect-MARGIN,y_rect),font)
+        blit_text(str(Player),(x_rect,y_rect),font)
+        blit_text(text,(x_rect+2*WIDTH,y_rect),font)
+        

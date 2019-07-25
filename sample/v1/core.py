@@ -53,7 +53,7 @@ def main():
                 logging.info('Exit game')
     #        If we want to select one field 
 #            text,select_grid,computer_turn,world=h.human_turn(world,select_grid,event,text)               
-            text,world,select_grid,computer_turn =h.global_turn(world,n_players,select_grid,event,text,computer_turn)
+#            text,world,select_grid,computer_turn =h.global_turn(world,n_players,select_grid,event,text,computer_turn)
         Ranking=h.ranking(world,n_players)
         #All CODE TO DRAW SHOULD GO BELOW THIS LINE
         # Set the screen background
@@ -66,6 +66,7 @@ def main():
         hd.display_ranking(Ranking)
         hd.next_turn_button()    
         hd.attack_button()
+        hd.final_ranking(Ranking)
         #All CODE TO DRAW SHOULD GO ABOVE THIS LINE 
         # Limit to 60 frames per second
         clock.tick(60)
