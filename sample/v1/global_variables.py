@@ -21,6 +21,8 @@ def initialize():
     global world
     global size_world
     global select_grid_0
+    global attack_mat
+    global defense_mat
     
     n_countries= n_players**2
     conq_countries = np.zeros((n_players,1))
@@ -30,6 +32,8 @@ def initialize():
     world = world.astype(int)
     size_world = np.shape(world)[1]
     select_grid_0 = np.zeros((n_players,n_players))
+    attack_mat = np.ones((n_players,n_players))
+    defense_mat = np.ones((n_players,n_players))
 
 ############# Drawing constants ############
     #####################################

@@ -2,9 +2,9 @@ import helpers as h
 import numpy as np
 
 n_players=3
-world = np.array([[1,1,1],
-                  [1,2,1],
-                  [1,2,1]])
+world = np.array([[0,1,0],
+                  [0,0,2],
+                  [0,2,0]])
 #world[1] = (0,0,1)
 #
 #print(world)
@@ -33,6 +33,7 @@ for i in range(0,n_players):
     if i not in Players:
         #The last loop ended up in n. This one starts in n+1
         Ranking[n][:]=([n+1,i,0])
+        n+=1
 Ranking=Ranking.astype(int)
 
 print ("Ranking 2",Ranking)

@@ -1770,3 +1770,323 @@ DEBUG:root:You have clicked Next_Turn button
 DEBUG:root:You have clicked Next_Turn button
 DEBUG:root:You have clicked Next_Turn button
 INFO:root:Exit game
+DEBUG:root:You have clicked Start button
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (1, 4)is been attacked by player.
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+INFO:root:Exit game
+DEBUG:root:You have clicked Start button
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (0, 3)is been attacked by player.
+DEBUG:root:You have clicked Start button
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (0, 2)is been attacked by player.
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (0, 2)is been attacked by player.
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (0, 2)is been attacked by player.
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (1, 1)is been attacked by player.
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+INFO:root:Exit game
+DEBUG:root:You have clicked Start button
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (1, 3)is been attacked by player.
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (3, 2)is been attacked by player.
+DEBUG:root:Human player conquered (3, 2). It used to belong to2
+DEBUG:root:Country (3, 4)is been attacked by player.
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (2, 2)is been attacked by player.
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (2, 2)is been attacked by player.
+DEBUG:root:Human player conquered (2, 2). It used to belong to4
+DEBUG:root:Country (3, 1)is been attacked by player.
+DEBUG:root:Human player conquered (3, 1). It used to belong to1
+DEBUG:root:Country (3, 3)is been attacked by player.
+DEBUG:root:Human player conquered (3, 3). It used to belong to3
+DEBUG:root:Country (4, 2)is been attacked by player.
+DEBUG:root:Human player conquered (4, 2). It used to belong to3
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (2, 1)is been attacked by player.
+DEBUG:root:Human player conquered (2, 1). It used to belong to4
+DEBUG:root:Country (3, 0)is been attacked by player.
+DEBUG:root:Human player conquered (3, 0). It used to belong to1
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (1, 1)is been attacked by player.
+DEBUG:root:Human player conquered (1, 1). It used to belong to4
+DEBUG:root:Country (2, 0)is been attacked by player.
+DEBUG:root:Human player conquered (2, 0). It used to belong to2
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (0, 1)is been attacked by player.
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (2, 3)is been attacked by player.
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (0, 1)is been attacked by player.
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (0, 1)is been attacked by player.
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (2, 3)is been attacked by player.
+DEBUG:root:Human player conquered (2, 3). It used to belong to2
+DEBUG:root:Country (3, 4)is been attacked by player.
+DEBUG:root:Human player conquered (3, 4). It used to belong to3
+DEBUG:root:Country (4, 3)is been attacked by player.
+DEBUG:root:Attacking...
+INFO:root:Exit game
+DEBUG:root:You have clicked Start button
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (2, 3)is been attacked by player.
+DEBUG:root:Human player conquered (2, 3). It used to belong to4
+DEBUG:root:Country (3, 4)is been attacked by player.
+DEBUG:root:Human player conquered (3, 4). It used to belong to4
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (3, 3)is been attacked by player.
+DEBUG:root:Human player conquered (3, 3). It used to belong to1
+DEBUG:root:Country (4, 4)is been attacked by player.
+DEBUG:root:Human player conquered (4, 4). It used to belong to4
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (3, 2)is been attacked by player.
+DEBUG:root:Human player conquered (3, 2). It used to belong to2
+DEBUG:root:Country (4, 3)is been attacked by player.
+DEBUG:root:Human player conquered (4, 3). It used to belong to1
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (2, 2)is been attacked by player.
+DEBUG:root:Human player conquered (2, 2). It used to belong to4
+DEBUG:root:Country (4, 2)is been attacked by player.
+DEBUG:root:Human player conquered (4, 2). It used to belong to4
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (2, 1)is been attacked by player.
+DEBUG:root:Human player conquered (2, 1). It used to belong to2
+DEBUG:root:Country (3, 0)is been attacked by player.
+DEBUG:root:Human player conquered (3, 0). It used to belong to2
+DEBUG:root:Country (4, 1)is been attacked by player.
+DEBUG:root:Human player conquered (4, 1). It used to belong to1
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (2, 0)is been attacked by player.
+DEBUG:root:Human player conquered (2, 0). It used to belong to3
+DEBUG:root:Country (4, 0)is been attacked by player.
+DEBUG:root:Human player conquered (4, 0). It used to belong to1
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (1, 0)is been attacked by player.
+DEBUG:root:Human player conquered (1, 0). It used to belong to3
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (1, 1)is been attacked by player.
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (1, 4)is been attacked by player.
+DEBUG:root:Human player conquered (1, 4). It used to belong to2
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (1, 2)is been attacked by player.
+DEBUG:root:Human player conquered (1, 2). It used to belong to3
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (0, 2)is been attacked by player.
+DEBUG:root:Human player conquered (0, 2). It used to belong to1
+DEBUG:root:Country (1, 1)is been attacked by player.
+DEBUG:root:Human player conquered (1, 1). It used to belong to3
+DEBUG:root:Country (1, 3)is been attacked by player.
+DEBUG:root:Human player conquered (1, 3). It used to belong to3
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (0, 1)is been attacked by player.
+DEBUG:root:Human player conquered (0, 1). It used to belong to1
+DEBUG:root:Country (0, 3)is been attacked by player.
+DEBUG:root:Human player conquered (0, 3). It used to belong to1
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (0, 4)is been attacked by player.
+DEBUG:root:Human player conquered (0, 4). It used to belong to3
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (0, 0)is been attacked by player.
+DEBUG:root:Human player conquered (0, 0). It used to belong to2
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+INFO:root:Exit game
+DEBUG:root:You have clicked Start button
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (1, 3)is been attacked by player.
+DEBUG:root:Human player conquered (1, 3). It used to belong to4
+DEBUG:root:Country (2, 2)is been attacked by player.
+DEBUG:root:Human player conquered (2, 2). It used to belong to1
+DEBUG:root:Country (2, 4)is been attacked by player.
+DEBUG:root:Human player conquered (2, 4). It used to belong to2
+DEBUG:root:Country (3, 3)is been attacked by player.
+DEBUG:root:Human player conquered (3, 3). It used to belong to1
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (3, 2)is been attacked by player.
+DEBUG:root:Human player conquered (3, 2). It used to belong to3
+DEBUG:root:Country (3, 4)is been attacked by player.
+DEBUG:root:Human player conquered (3, 4). It used to belong to2
+DEBUG:root:Country (4, 3)is been attacked by player.
+DEBUG:root:Human player conquered (4, 3). It used to belong to3
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (4, 4)is been attacked by player.
+DEBUG:root:Human player conquered (4, 4). It used to belong to1
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (4, 1)is been attacked by player.
+DEBUG:root:Human player conquered (4, 1). It used to belong to2
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (2, 1)is been attacked by player.
+DEBUG:root:Human player conquered (2, 1). It used to belong to4
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (2, 0)is been attacked by player.
+DEBUG:root:Human player conquered (2, 0). It used to belong to2
+DEBUG:root:Country (3, 1)is been attacked by player.
+DEBUG:root:Human player conquered (3, 1). It used to belong to1
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (1, 0)is been attacked by player.
+DEBUG:root:Human player conquered (1, 0). It used to belong to1
+DEBUG:root:Country (3, 0)is been attacked by player.
+DEBUG:root:Human player conquered (3, 0). It used to belong to4
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (0, 0)is been attacked by player.
+DEBUG:root:Human player conquered (0, 0). It used to belong to3
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (0, 1)is been attacked by player.
+DEBUG:root:Human player conquered (0, 1). It used to belong to3
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (0, 3)is been attacked by player.
+DEBUG:root:Human player conquered (0, 3). It used to belong to4
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (0, 4)is been attacked by player.
+DEBUG:root:Human player conquered (0, 4). It used to belong to4
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (1, 4)is been attacked by player.
+DEBUG:root:Human player conquered (1, 4). It used to belong to3
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (4, 0)is been attacked by player.
+DEBUG:root:Human player conquered (4, 0). It used to belong to2
+DEBUG:root:Attacking...
+INFO:root:Exit game
+DEBUG:root:You have clicked Start button
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (0, 2)is been attacked by player.

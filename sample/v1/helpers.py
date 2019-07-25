@@ -63,12 +63,12 @@ def individual_turn(world,current_player_id):
         x_origin= rand_num()
         y_origin= rand_num()
         defender_pos = search(world,current_player_id,x_origin,y_origin)
-#        attacker_pos = (x_origin,y_origin)
+        attacker_pos = (x_origin,y_origin)
         if defender_pos != -1:
             defender_id = world[defender_pos]
 #            hd.print_text('Player ' + repr(current_player_id) +' attacks from country ' + repr(attacker_pos))
 #            hd.print_text('The target country is ' + repr(defender_pos)+ '. It belongs to Player ' + repr(defender_id))
-            if combat(current_player_id,defender_id):
+            if combat(attacker_pos,defender_pos):
                 world[defender_pos]= current_player_id
 #                hd.print_text('Player ' + repr(current_player_id) + ' has conquered ' + repr(defender_pos))
 #                hd.print_text('This territory used to belong to Player ' + repr(defender_id))
@@ -88,6 +88,10 @@ def individual_turn(world,current_player_id):
 
 
 def human_turn(text,world,select_grid,event):
+    if count_countries(world)[1][0] == g.n_countries:
+#            hd.print_text('Player ' + repr(current_player_id) + ' has conquered the world!')
+            #We return an empty array to global_turn
+            g.end_game=True
     select_grid,text = hd.select_field(event,select_grid,world,text)
     computer_turn= hd.next_turn(event)
     if hd.attack(event):
@@ -136,12 +140,15 @@ def search(world,current_player_id,i,j):
         
                 
 
-def combat(atacker,defender):
-    attack = random.random()
-    defense = random.random()
+def combat(attacker_pos,defender_pos):
+    attack = g.attack_mat[attacker_pos]*random.random()
+    defense = g.defense_mat[defender_pos]*random.random()
     if attack > defense:
+        g.attack_mat[attacker_pos]+=1
         return True
+        
     else:
+        g.defense_mat[defender_pos]+=1
         return False
     
 # Do a function to count the number of countries per player
@@ -181,6 +188,7 @@ def ranking(world,n_players):
         if i not in Players:
             #The last loop ended up in n. This one starts in n+1
             Ranking[n][:]=([n+1,i,0])
+            n+=1
     Ranking=Ranking.astype(int)
     return Ranking
             
@@ -191,8 +199,8 @@ def human_combat(select_grid,world,text):
     computer_turn=False
     for row in range(g.n_players):
         for column in range(g.n_players):
-#            if select_grid[row][column] == -1:
-#                attacker_pos = (row,column)
+            if select_grid[row][column] == -1:
+                attacker_pos = (row,column)
             if select_grid[row][column] == 2:
                 defenders [n]= (row,column)
                 n+=1
@@ -202,7 +210,7 @@ def human_combat(select_grid,world,text):
             attacker = g.human_playerid
             logging.debug("Country "+ repr(defender_pos) + "is been attacked by player.")
             defender = world[defender_pos]
-            if combat(attacker,defender) and world[defender_pos]!= attacker :
+            if combat(attacker_pos,defender_pos) and world[defender_pos]!= attacker :
                 world[defender_pos]= attacker
                 logging.debug( 'Human player conquered ' + repr(defender_pos)+'. It used to belong to' + repr(defender))
             else:
