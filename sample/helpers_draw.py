@@ -12,7 +12,9 @@ CHAT_HEIGHT = g.CHAT_HEIGHT
 CHAT_WIDTH= g.CHAT_WIDTH
 text_pos =  [2*MARGIN, (MARGIN + HEIGHT) * n_players + 2*MARGIN]
 z=""
-screen = pygame.display.set_mode(g.WINDOW_SIZE)
+def initialize_screen():
+    global screen
+    screen = pygame.display.set_mode(g.WINDOW_SIZE)
 
 def print_text(Text,paused = False,screen=screen):
 

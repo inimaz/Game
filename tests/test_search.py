@@ -3,11 +3,22 @@
 """
 This is to be run in the command line with
 pytest *nameOfFile*
+
+To run all
+python -m pytest
+or
+py.test
+
+if you would like to see details, use -v (verbose)
+
 """
 import sys
-print ('This is the path before context ', sys.path)
-from .context import sample
-print ('This is the path after context ', sys.path)
+import tests.context
+
+print(sys.path)
+tests.context.initialize()
+print(sys.path)
+
 from sample import helpers as h
 import numpy as np
 
