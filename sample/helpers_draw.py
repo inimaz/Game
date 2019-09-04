@@ -1,7 +1,6 @@
 import pygame
 import global_variables as g
 import numpy as np
-import time
 import logging
 
 MARGIN = g.MARGIN
@@ -12,9 +11,8 @@ CHAT_HEIGHT = g.CHAT_HEIGHT
 CHAT_WIDTH= g.CHAT_WIDTH
 text_pos =  [2*MARGIN, (MARGIN + HEIGHT) * n_players + 2*MARGIN]
 z=""
-def initialize_screen():
-    global screen
-    screen = pygame.display.set_mode(g.WINDOW_SIZE)
+
+screen = pygame.display.set_mode(g.WINDOW_SIZE)
 
 def print_text(Text,paused = False,screen=screen):
 

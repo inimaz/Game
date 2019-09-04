@@ -23,7 +23,6 @@ def main():
      
     # Initialize pygame
     pygame.init()
-    hd.initialize_screen()
     
     
     #hd.print_text ('There are ' + repr(g.n_countries) + ' countries')

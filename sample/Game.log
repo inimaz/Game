@@ -176,3 +176,98 @@ DEBUG:root:You have clicked Next_Turn button
 DEBUG:root:You have clicked Next_Turn button
 DEBUG:root:You have clicked Next_Turn button
 INFO:root:Exit game
+DEBUG:root:You have clicked Start button
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (2, 1)is been attacked by player.
+DEBUG:root:Human player conquered (2, 1). It used to belong to4
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (1, 2)is been attacked by player.
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (2, 3)is been attacked by player.
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (3, 3)is been attacked by player.
+DEBUG:root:Human player conquered (3, 3). It used to belong to4
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (2, 4)is been attacked by player.
+DEBUG:root:Human player conquered (2, 4). It used to belong to3
+DEBUG:root:Country (3, 3)is been attacked by player.
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (1, 2)is been attacked by player.
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (2, 4)is been attacked by player.
+DEBUG:root:Human player conquered (2, 4). It used to belong to3
+DEBUG:root:Country (4, 4)is been attacked by player.
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (1, 4)is been attacked by player.
+DEBUG:root:Attacking...
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Next_Turn button
+DEBUG:root:You have clicked Attack button
+DEBUG:root:Country (3, 3)is been attacked by player.
+DEBUG:root:Attacking...
+INFO:root:Exit game
