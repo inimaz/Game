@@ -12,17 +12,16 @@ py.test
 if you would like to see details, use -v (verbose)
 
 """
-import sys,os
-myPath = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, myPath + '/../')
-print (myPath)
+from .context import sample
 import helpers as h
 import numpy as np
+import global_variables as g
+import pytest
 
 #We define the variables
 current_player_id = 0            
 n_players = 3
-h.g.initialize(n_players)
+g.initialize(n_players)
 world = np.array([[0,0,0],
                   [1,2,1],
                   [1,2,2]])
